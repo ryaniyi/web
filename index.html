@@ -1,13 +1,46 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Super</title>
-</head>
-<body>
-    <h2>Hello World!</h2>
-</body>
-</html>
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><link rel=icon href=/favicon.jpg><title>SuperSwap</title><style>.clean {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        z-index: 10;
+        background: green;
+        opacity: 0.4;
+        border-radius: 10px;
+        width: 80px;
+        color: #fff;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+        display: none;
+      }</style><link href=/js/AHome.f361e24c.js rel=prefetch><link href=/js/FHome.1c657a1f.js rel=prefetch><link href=/js/Join.03b64433.js rel=prefetch><link href=/js/Mine.3cb24a07.js rel=prefetch><link href=/js/MineInfo.37cc57af.js rel=prefetch><link href=/js/download.8b7f9fdf.js rel=prefetch><link href=/js/app.3fc1d88f.js rel=preload as=script><link href=/js/chunk-vendors.71e377b1.js rel=preload as=script></head><body><noscript><strong>We're sorry but etherminer doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><div id=clean class=clean>clean</div><script>var is_debug = getQueryVariable('debug')
+        if(is_debug == 1){
+          document.getElementById('clean').style = "display: block;";
+          // add console
+          (function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
+        }
+        function delCookie() {
+          var keys = document.cookie.match(/[^ =;]+(?==)/g)
+          if (keys) {
+            for (var i = keys.length; i--;) {
+              document.cookie = keys[i] + '=0;path=/;expires=' + new Date(0).toUTCString()
+              document.cookie = keys[i] + '=0;path=/;domain=' + document.domain + ';expires=' + new Date(0).toUTCString()
+            }
+          }
+        }
+        function getQueryVariable(variable) {
+          var query = window.location.search.substring(1);
+          var vars = query.split("&");
+          for (var i=0;i<vars.length;i++) {
+                  var pair = vars[i].split("=");
+                  if(pair[0] == variable){return pair[1];}
+          }
+          return false;
+        }
+        document.getElementById('clean').addEventListener('click', function(){
+          if(typeof window.localStorage != 'undefined'){
+            localStorage.clear()
+          }
+          delCookie()
+          window.location.reload()
+        })</script><script src=/js/chunk-vendors.71e377b1.js></script><script src=/js/app.3fc1d88f.js></script></body></html>
